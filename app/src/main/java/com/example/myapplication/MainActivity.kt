@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -15,7 +16,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn2.setOnClickListener {
-
+            val intent = Intent(this, SubActivity::class.java)
+            startActivity(intent)
         }
     }
 }
