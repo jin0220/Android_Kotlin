@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:backgroundTint="#ccc"
-            android:text="화면 전환" />
+            android:text="snackBar" />
 
         <Button
             android:id="@+id/btn3"
@@ -31,7 +31,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:backgroundTint="#ccc"
-            android:text="editText" />
+            android:text="화면 전환" />
+
+
 
     </LinearLayout>
 
@@ -46,23 +48,54 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:backgroundTint="#ccc"
+            android:text="editText" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#ccc"
             android:text="대화상자" />
 
-<!--        <Button-->
-<!--            android:id="@+id/btn2"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_margin="10dp"-->
-<!--            android:backgroundTint="#ccc"-->
-<!--            android:text="화면 전환" />-->
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#ccc"
+            android:text="프로그래스 바" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#ccc"
+            android:text="스피너" />
 
 <!--        <Button-->
-<!--            android:id="@+id/btn3"-->
+<!--            android:id="@+id/btn8"-->
 <!--            android:layout_width="wrap_content"-->
 <!--            android:layout_height="wrap_content"-->
 <!--            android:layout_margin="10dp"-->
 <!--            android:backgroundTint="#ccc"-->
-<!--            android:text="editText" />-->
+<!--            android:text="대화상자" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btn9"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:backgroundTint="#ccc"-->
+<!--            android:text="프로그래스 바" />-->
 
     </LinearLayout>
 

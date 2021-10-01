@@ -1,10 +1,12 @@
 package com.example.myapplication
 
+import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -17,20 +19,25 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "click!",Toast.LENGTH_SHORT).show()
         }
 
-        //화면전환
+        //스낵바
         btn2.setOnClickListener {
+            Snackbar.make(it, "스낵바",Snackbar.LENGTH_LONG).show()
+        }
+
+        //화면전환
+        btn3.setOnClickListener {
             val intent = Intent(this, SubActivity::class.java)
             startActivity(intent)
         }
 
         //에디트 텍스트
-        btn3.setOnClickListener {
+        btn4.setOnClickListener {
             val intent = Intent(this, EditTextActivity::class.java)
             startActivity(intent)
         }
 
         //대화상자
-        btn4.setOnClickListener {
+        btn5.setOnClickListener {
             val builder = AlertDialog.Builder(this)
 
             builder.setIcon(R.drawable.ic_launcher_foreground) //제목 아이콘
@@ -59,5 +66,17 @@ class MainActivity : AppCompatActivity() {
 
             builder.show()
         }
+
+        //프로그래스바
+        btn6.setOnClickListener {
+
+        }
+
+        //스피너
+        btn7.setOnClickListener {
+            val intent = Intent(this, SpinnerActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
