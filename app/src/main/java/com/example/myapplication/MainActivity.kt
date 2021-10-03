@@ -1,43 +1,48 @@
 package com.example.myapplication
 
+import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.example.myapplication.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    val binding by lazy { ActivityMainBinding.inflate(layoutInflater)}
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
         //토스트 메시지
-        btn1.setOnClickListener {
+        binding.btn1.setOnClickListener {
             Toast.makeText(this, "click!",Toast.LENGTH_SHORT).show()
         }
 
         //스낵바
-        btn2.setOnClickListener {
+        binding.btn2.setOnClickListener {
             Snackbar.make(it, "스낵바",Snackbar.LENGTH_LONG).show()
         }
 
         //화면전환
-        btn3.setOnClickListener {
+        binding.btn3.setOnClickListener {
             val intent = Intent(this, SubActivity::class.java)
-            startActivity(intent)
+            intent.putExtra("from", 100)
+            startActivityForResult(intent,99 )
         }
 
         //에디트 텍스트
-        btn4.setOnClickListener {
+        binding.btn4.setOnClickListener {
             val intent = Intent(this, EditTextActivity::class.java)
             startActivity(intent)
         }
 
         //대화상자
-        btn5.setOnClickListener {
+        binding.btn5.setOnClickListener {
             val builder = AlertDialog.Builder(this)
 
             builder.setIcon(R.drawable.ic_launcher_foreground) //제목 아이콘
@@ -68,15 +73,37 @@ class MainActivity : AppCompatActivity() {
         }
 
         //프로그래스바
-        btn6.setOnClickListener {
-
+        binding.btn6.setOnClickListener {
+            val intent = Intent(this, ProgressBarActivity::class.java)
+            startActivity(intent)
         }
 
         //스피너
-        btn7.setOnClickListener {
+        binding.btn7.setOnClickListener {
             val intent = Intent(this, SpinnerActivity::class.java)
             startActivity(intent)
         }
 
+        binding.btn8.setOnClickListener {
+            val intent = Intent(this, SeekBarActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if(resultCode == Activity.RESULT_OK){
+            when(requestCode){
+                99 -> {
+                    data?.getStringExtra("값")?.let { message ->
+                        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        }
+    }
+
 }
