@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_spinner.*
 
 class SpinnerActivity : AppCompatActivity() {
 
-    var items = arrayOf("가","나","다","라")
+    var items = listOf("가","나","다","라")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,12 +25,14 @@ class SpinnerActivity : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
-                when(position){
-                    0-> textView.text = items[0]
-                    1-> textView.text = items[1]
-                    2-> textView.text = items[2]
-                    3-> textView.text = items[3]
-                }
+//                when(position){
+//                    0-> textView.text = items[0]
+//                    1-> textView.text = items[1]
+//                    2-> textView.text = items[2]
+//                    3-> textView.text = items[3]
+//                }
+                val selected = items.get(position)
+                textView.text = selected
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {

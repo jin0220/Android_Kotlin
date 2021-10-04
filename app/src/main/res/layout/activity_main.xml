@@ -89,13 +89,13 @@
             android:backgroundTint="#ccc"
             android:text="시크바" />
 
-<!--        <Button-->
-<!--            android:id="@+id/btn9"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_margin="10dp"-->
-<!--            android:backgroundTint="#ccc"-->
-<!--            android:text="프로그래스 바" />-->
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#ccc"
+            android:text="리사이클러뷰" />
 
     </LinearLayout>
 
