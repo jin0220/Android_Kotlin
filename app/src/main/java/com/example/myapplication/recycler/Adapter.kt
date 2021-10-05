@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.recycler
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,6 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.RecyclerContentBinding
 import java.text.SimpleDateFormat
-import java.util.logging.SimpleFormatter
 
 class Adapter(val listDate:MutableList<Memo>): RecyclerView.Adapter<Adapter.Holder>() {
 
@@ -25,7 +24,7 @@ class Adapter(val listDate:MutableList<Memo>): RecyclerView.Adapter<Adapter.Hold
     override fun getItemCount(): Int = listDate.size
 
     class Holder(val binding:RecyclerContentBinding):RecyclerView.ViewHolder(binding.root){
-        lateinit var currentMemo:Memo
+        lateinit var currentMemo: Memo
         //클릭처리는 init에서만 한다.
         init {
             binding.root.setOnClickListener{
@@ -34,7 +33,7 @@ class Adapter(val listDate:MutableList<Memo>): RecyclerView.Adapter<Adapter.Hold
         }
 
         //3.받은 데이터를 화면에 출력한다.
-        fun setMemo(memo:Memo){
+        fun setMemo(memo: Memo){
             currentMemo = memo
             with(binding) {
                 no.text = "${memo.no}"

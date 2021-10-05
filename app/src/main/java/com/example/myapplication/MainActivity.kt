@@ -1,13 +1,15 @@
 package com.example.myapplication
 
 import android.app.Activity
-import android.app.ProgressDialog
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import com.example.myapplication.databinding.ActivityMainBinding
+import com.example.myapplication.fragment.FragmentActivity
+import com.example.myapplication.fragment.FragmentDataActivity
+import com.example.myapplication.recycler.RecyclerViewActivity
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
@@ -92,10 +94,19 @@ class MainActivity : AppCompatActivity() {
             }
 
             btn9.setOnClickListener {
-                val intent = Intent(applicationContext,RecyclerViewActivity::class.java)
+                val intent = Intent(applicationContext, RecyclerViewActivity::class.java)
                 startActivity(intent)
             }
 
+            btn10.setOnClickListener {
+                val intent = Intent(applicationContext, FragmentActivity::class.java)
+                startActivity(intent)
+            }
+
+            btn11.setOnClickListener {
+                val intent = Intent(applicationContext, FragmentDataActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 

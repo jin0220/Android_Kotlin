@@ -1,3 +1,3 @@
-package com.example.myapplication
+package com.example.myapplication.recycler
 
 data class Memo (var no:Int, var title:String, var timestamp:Long)
