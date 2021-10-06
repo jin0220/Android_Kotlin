@@ -10,6 +10,7 @@ import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.fragment.FragmentActivity
 import com.example.myapplication.fragment.FragmentDataActivity
 import com.example.myapplication.recycler.RecyclerViewActivity
+import com.example.myapplication.viewPager.ViewPagerActivity
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
@@ -105,6 +106,16 @@ class MainActivity : AppCompatActivity() {
 
             btn11.setOnClickListener {
                 val intent = Intent(applicationContext, FragmentDataActivity::class.java)
+                startActivity(intent)
+            }
+
+            btn12.setOnClickListener {
+                val intent = Intent(applicationContext, CustomActivity::class.java)
+                startActivity(intent)
+            }
+
+            btn13.setOnClickListener {
+                val intent = Intent(applicationContext, ViewPagerActivity::class.java)
                 startActivity(intent)
             }
         }
