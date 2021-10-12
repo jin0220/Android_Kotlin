@@ -130,6 +130,16 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(applicationContext, RoomActivity::class.java)
                 startActivity(intent)
             }
+
+            btn16.setOnClickListener {
+                val intent = Intent(applicationContext, ThreadActivity::class.java)
+                startActivity(intent)
+            }
+
+            btn17.setOnClickListener {
+                val intent = Intent(applicationContext, CoroutineActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 

@@ -149,7 +149,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:backgroundTint="#ccc"
-            android:text="위험권한" />
+            android:text="위험권한+카메라" />
 
     </LinearLayout>
 
@@ -166,21 +166,21 @@
             android:backgroundTint="#ccc"
             android:text="room db" />
 
-<!--        <Button-->
-<!--            android:id="@+id/btn13"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_margin="10dp"-->
-<!--            android:backgroundTint="#ccc"-->
-<!--            android:text="뷰페이저" />-->
+        <Button
+            android:id="@+id/btn16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#ccc"
+            android:text="스레드 타이머" />
 
-<!--        <Button-->
-<!--            android:id="@+id/btn14"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_margin="10dp"-->
-<!--            android:backgroundTint="#ccc"-->
-<!--            android:text="위험권한" />-->
+        <Button
+            android:id="@+id/btn17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#ccc"
+            android:text="코루틴" />
 
     </LinearLayout>
 
