@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import android.app.Activity
 import android.app.AlertDialog
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +11,7 @@ import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.fragment.FragmentActivity
 import com.example.myapplication.fragment.FragmentDataActivity
 import com.example.myapplication.recycler.RecyclerViewActivity
+import com.example.myapplication.roomDB.RoomActivity
 import com.example.myapplication.viewPager.ViewPagerActivity
 import com.google.android.material.snackbar.Snackbar
 
@@ -118,6 +120,16 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(applicationContext, ViewPagerActivity::class.java)
                 startActivity(intent)
             }
+
+            btn14.setOnClickListener {
+                val intent = Intent(applicationContext, PermissionActivity::class.java)
+                startActivity(intent)
+            }
+
+            btn15.setOnClickListener {
+                val intent = Intent(applicationContext, RoomActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 
@@ -133,6 +145,19 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    fun shardPreference(){
+        val shard = getSharedPreferences("파일명", Context.MODE_PRIVATE)
+
+        val firstOpen = shard.getBoolean("key", false) //키에 대한 정보가 저장되어 있는지 확인
+        if(firstOpen){
+
+        }
+
+        val editor = shard.edit() //수정을 위한 에디터를 꺼냄
+        editor.putBoolean("key",true)
+        editor.commit()
     }
 
 }
