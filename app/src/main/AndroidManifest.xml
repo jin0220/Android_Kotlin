@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
+
     <!-- 일반권한 - 매니페스트에 명세해주는 것만으로 사용할 수 있다. -->
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 위험권한 - 매니페스트에도 명세하고 코드에서도 한번더 확인(개인 정보와 관련된 권한은 모두 위험권한) -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 
     <uses-feature android:name="android.hardware.camera2" />
 
@@ -16,7 +19,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".CoroutineActivity"></activity>
+        <service
+            android:name=".foreground.Foreground"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".foreground.ForegroundActivity" />
+        <activity android:name=".service.ServiceActivity" />
+
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".CoroutineActivity" />
         <activity android:name=".ThreadActivity" />
         <activity android:name=".roomDB.RoomActivity" />
         <activity android:name=".PermissionActivity" />

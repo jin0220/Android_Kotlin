@@ -184,4 +184,35 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#ccc"
+            android:text="서비스" />
+
+        <Button
+            android:id="@+id/btn19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#ccc"
+            android:text="포어그라운드 서비스" />
+
+<!--        <Button-->
+<!--            android:id="@+id/btn17"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:backgroundTint="#ccc"-->
+<!--            android:text="코루틴" />-->
+
+    </LinearLayout>
+
 </LinearLayout>

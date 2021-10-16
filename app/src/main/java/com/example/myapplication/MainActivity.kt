@@ -8,10 +8,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.myapplication.databinding.ActivityMainBinding
+import com.example.myapplication.foreground.ForegroundActivity
 import com.example.myapplication.fragment.FragmentActivity
 import com.example.myapplication.fragment.FragmentDataActivity
 import com.example.myapplication.recycler.RecyclerViewActivity
 import com.example.myapplication.roomDB.RoomActivity
+import com.example.myapplication.service.ServiceActivity
 import com.example.myapplication.viewPager.ViewPagerActivity
 import com.google.android.material.snackbar.Snackbar
 
@@ -138,6 +140,16 @@ class MainActivity : AppCompatActivity() {
 
             btn17.setOnClickListener {
                 val intent = Intent(applicationContext, CoroutineActivity::class.java)
+                startActivity(intent)
+            }
+
+            btn18.setOnClickListener {
+                val intent = Intent(applicationContext, ServiceActivity::class.java)
+                startActivity(intent)
+            }
+
+            btn19.setOnClickListener {
+                val intent = Intent(applicationContext, ForegroundActivity::class.java)
                 startActivity(intent)
             }
         }
