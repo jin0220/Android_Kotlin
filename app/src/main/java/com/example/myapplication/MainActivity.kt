@@ -12,6 +12,7 @@ import com.example.myapplication.foreground.ForegroundActivity
 import com.example.myapplication.fragment.FragmentActivity
 import com.example.myapplication.fragment.FragmentDataActivity
 import com.example.myapplication.recycler.RecyclerViewActivity
+import com.example.myapplication.retrofit.RetrofitActivity
 import com.example.myapplication.roomDB.RoomActivity
 import com.example.myapplication.service.ServiceActivity
 import com.example.myapplication.viewPager.ViewPagerActivity
@@ -150,6 +151,11 @@ class MainActivity : AppCompatActivity() {
 
             btn19.setOnClickListener {
                 val intent = Intent(applicationContext, ForegroundActivity::class.java)
+                startActivity(intent)
+            }
+
+            btn20.setOnClickListener {
+                val intent = Intent(applicationContext, RetrofitActivity::class.java)
                 startActivity(intent)
             }
         }

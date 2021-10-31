@@ -1,0 +1,8 @@
+<!--보안상 http는 사용할 수 없음. 현재 레트로핏 연결 확인을 위해 http 통신 허용함.-->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">example.com</domain>
+        <domain includeSubdomains="true">myapplication.example.com</domain>
+    </domain-config>
+    <base-config cleartextTrafficPermitted="true"/>
+</network-security-config>
