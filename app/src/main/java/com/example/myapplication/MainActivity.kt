@@ -11,6 +11,7 @@ import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.foreground.ForegroundActivity
 import com.example.myapplication.fragment.FragmentActivity
 import com.example.myapplication.fragment.FragmentDataActivity
+import com.example.myapplication.mvvm.ViewActivity
 import com.example.myapplication.recycler.RecyclerViewActivity
 import com.example.myapplication.retrofit.RetrofitActivity
 import com.example.myapplication.roomDB.RoomActivity
@@ -156,6 +157,11 @@ class MainActivity : AppCompatActivity() {
 
             btn20.setOnClickListener {
                 val intent = Intent(applicationContext, RetrofitActivity::class.java)
+                startActivity(intent)
+            }
+
+            btn21.setOnClickListener {
+                val intent = Intent(applicationContext, ViewActivity::class.java)
                 startActivity(intent)
             }
         }
